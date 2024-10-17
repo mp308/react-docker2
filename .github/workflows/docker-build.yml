@@ -21,10 +21,19 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-    # ขั้นตอนที่สาม: Build Docker image
+  
+      # ขั้นตอนที่สาม: Build Docker image
     - name: Build Docker image
-      run: docker build -t mp308/react-docker-test2:0.2 .
+      run: docker build -t weenatcha/react-docker-test2:0.2 .
 
     # ขั้นตอนที่สี่: Push Docker image ไปที่ Docker Hub
     - name: Push Docker image to Docker Hub
-      run: docker push mp308/react-docker-test2:0.2
+      run: docker push weenatcha/react-docker-test2:0.2
+
+    # ขั้นตอนที่สาม: Build Docker image
+    # - name: Build Docker image
+    #   run: docker build -t mp308/react-docker-test2:0.2 .
+
+    # ขั้นตอนที่สี่: Push Docker image ไปที่ Docker Hub
+    # - name: Push Docker image to Docker Hub
+    #   run: docker push mp308/react-docker-test2:0.2
